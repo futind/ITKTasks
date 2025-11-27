@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Daniil Futin
+      labels: "Create orders table"
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  type: uuid
+                  name: id
+                  constraints:
+                    primaryKey: true
+              - column:
+                  type: varchar
+                  name: status
+                  constraints:
+                    nullable: false
+              - column:
+                  type: json
+                  name: products_quantities
