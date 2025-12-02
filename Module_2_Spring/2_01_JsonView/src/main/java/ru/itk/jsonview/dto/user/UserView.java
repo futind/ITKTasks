@@ -1,8 +1,17 @@
 package ru.itk.jsonview.dto.user;
 
+/**
+ * An interface needed to create two separate json views - summary and detailed
+ */
 public interface UserView {
 
-    public static class Summary {}
+    /**
+     * Basic information about the user - id, name, email
+     */
+    class Summary {}
 
-    public static class Detailed extends Summary {}
+    /**
+     * Basic information + infromation about user's orders
+     */
+    class Detailed extends Summary {}
 }
