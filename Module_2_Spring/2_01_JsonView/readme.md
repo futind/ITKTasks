@@ -25,3 +25,12 @@ Other:
 - Implement exception handling with the use of correct HTTP status in every case
 - Validate incoming data (using `jakarta.validation`)
 - Create unit-tests to test that different json views implemented correctly
+
+## Launch
+To configure the application edit the `.env` file.
+
+To launch the application use the following commands:
+```shell
+docker-compose build
+docker-compose up -d
+```

@@ -1,0 +1,26 @@
+services:
+  jsonview-db:
+    image: postgres:17.6-alpine3.21
+    container_name: jsonview-db
+    ports:
+      - "${DB_PORT}:${DB_PORT_INTERNAL}"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - jsonview-db-data:/var/lib/postgresql/data
+
+  jsonview-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jsonview-app
+    env_file: .env
+    depends_on:
+      - jsonview-db
+    ports:
+      - "${APP_PORT}:${APP_PORT_INTERNAL}"
+
+volumes:
+  jsonview-db-data:
