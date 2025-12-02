@@ -2,10 +2,10 @@ databaseChangeLog:
   - changeSet:
       id: 2
       author: Daniil Futin
-      labels: "Create orders table"
+      labels: "Create users table"
       changes:
         - createTable:
-            tableName: orders
+            tableName: users
             columns:
               - column:
                   type: uuid
@@ -14,9 +14,12 @@ databaseChangeLog:
                     primaryKey: true
               - column:
                   type: varchar
-                  name: status
+                  name: full_name
                   constraints:
                     nullable: false
               - column:
-                  type: json
-                  name: products_quantities
+                  type: varchar
+                  name: email
+                  constraints:
+                    nullable: false
+                    unique: true

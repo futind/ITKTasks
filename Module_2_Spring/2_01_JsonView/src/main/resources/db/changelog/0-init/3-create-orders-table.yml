@@ -2,10 +2,10 @@ databaseChangeLog:
   - changeSet:
       id: 3
       author: Daniil Futin
-      labels: "Create users table"
+      labels: "Create orders table"
       changes:
         - createTable:
-            tableName: users
+            tableName: orders
             columns:
               - column:
                   type: uuid
@@ -13,24 +13,22 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
               - column:
-                  type: varchar
-                  name: full_name
-                  constraints:
-                    nullable: false
-              - column:
-                  type: varchar
-                  name: email
-                  constraints:
-                    nullable: false
-              - column:
                   type: uuid
-                  name: orders
+                  name: user_id
                   constraints:
-                    nullable: true
+                    nullable: false
+              - column:
+                  type: varchar
+                  name: status
+                  constraints:
+                    nullable: false
+              - column:
+                  type: json
+                  name: products_quantities
 
         - addForeignKeyConstraint:
-            baseTableName: users
-            baseColumnNames: orders
-            referencedTableName: orders
+            baseTableName: orders
+            baseColumnNames: user_id
+            referencedTableName: users
             referencedColumnNames: id
-            constraintName: users_orders_fk_constraint
+            constraintName: orders_users_fk_constraint

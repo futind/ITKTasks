@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: Daniil Futin
+      labels: "Load products data"
+      changes:
+        - loadData:
+            tableName: products
+            file: db/data/products.csv
+            separator: ","
+            quotchar: '"'
+            encoding: UTF-8
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+              - column:
+                  name: name
+                  type: string
+              - column:
+                  name: description
+                  type: string
+              - column:
+                  name: price
+                  type: numeric
