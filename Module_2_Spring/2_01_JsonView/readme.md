@@ -1,5 +1,3 @@
-Практическое задание - Spring MVC - json view
-
 # Json View
 
 ## Task
