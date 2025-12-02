@@ -2,8 +2,7 @@ package ru.itk.jsonview.model.user;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import ru.itk.jsonview.model.order.OrderEntity;
 
 import java.util.List;
@@ -12,6 +11,9 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "users")
 public class UserEntity {
 
@@ -23,11 +25,10 @@ public class UserEntity {
     private String fullName;
 
     @Email
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
     @Column(name = "orders", nullable = true)
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @OneToMany(mappedBy = "userId", fetch = FetchType.LAZY)
     private List<OrderEntity> orders;
 }
