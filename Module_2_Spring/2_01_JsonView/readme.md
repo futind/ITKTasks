@@ -1,39 +1,27 @@
 Практическое задание - Spring MVC - json view
 
-Разработайте RESTful API для управления информацией о пользователях и их заказах в интернет-магазине. Используйте аннотацию @JsonView для определения различных представлений JSON в зависимости от контекста.
-Сущности:
+# Json View
 
-User: содержит информацию о пользователе, такую как имя, адрес электронной почты, идентификатор и т.д.
+## Task
+The task is to implement a RESTful application for 
+managing user information and their respective orders.
+It is necessary to use `@JsonView` annotation in order to produce
+the json with appropriate data, e.g. show user's orders in a detailed view,
+but hide them otherwise.
 
-Order: представляет заказ пользователя и содержит информацию о товарах, сумме заказа и статусе.
-Реализация CRUD операций:
+### Entities to create:
+- `User` - contains the information about the user - id, name, email, etc...
+- `Order` - describes an order and contains the information about the products, total amount and status.
 
-    Создайте CRUD операции для пользователей и их заказов с использованием Spring Data JPA.
 
-    RESTful API:
+### Endpoints to create:
+- Get all user's information (without details)
+- Get particular user's information (with details)
+- Create a new user
+- Update an existing user
+- Delete an existing user
 
-    Реализуйте RESTful эндпоинты для:
-
-    Получения списка всех пользователей (без деталей заказов).
-
-    Получения информации о конкретном пользователе (включая детали заказов).
-
-    Создания нового пользователя.
-
-    Обновления информации о пользователе.
-
-    Удаления пользователя.
-
-Используйте @JsonView для определения различных представлений JSON в зависимости от контекста:
-
-Создайте интерфейсы представлений, например, Views.UserSummary и Views.UserDetails.
-
-Настройте их в соответствии с вашими потребностями (например, в представлении UserSummary отображать только базовую информацию о пользователе, а в UserDetails включать также детали заказов).
-Обработка ошибок и валидация:
-
-Обеспечьте корректную обработку ошибок и возвращение соответствующих HTTP-статусов.
-
-Добавьте валидацию входных данных, такую как проверка корректности электронной почты.
-Тестирование:
-
-Напишите модульные тесты для вашего кода, уделяя внимание различным представлениям JSON при использовании @JsonView.
+Other:
+- Implement exception handling with the use of correct HTTP status in every case
+- Validate incoming data (using `jakarta.validation`)
+- Create unit-tests to test that different json views implemented correctly
