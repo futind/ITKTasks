@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Daniil Futin
+      labels: "Create products table"
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  type: uuid
+                  name: id
+                  constraints:
+                    primaryKey: true
+              - column:
+                  type: text
+                  name: name
+                  constraints:
+                    nullable: false
+              - column:
+                  type: text
+                  name: description
+                  constraints:
+                    nullable: true
+              - column:
+                  type: decimal(8,2)
+                  name: price
+                  constraints:
+                    nullable: false

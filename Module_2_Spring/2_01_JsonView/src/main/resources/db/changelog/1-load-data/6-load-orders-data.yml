@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6
+      author: Daniil Futin
+      labels: "Load orders data"
+      changes:
+        - loadData:
+            tableName: orders
+            file: db/data/orders.csv
+            separator: ","
+            quotchar: '"'
+            encoding: UTF-8
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+              - column:
+                  name: user_id
+                  type: uuid
+              - column:
+                  name: status
+                  type: string
+              - column:
+                  name: products_quantities
+                  type: string

@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: Daniil Futin
+      labels: "Load users data"
+      changes:
+        - loadData:
+            tableName: users
+            file: db/data/users.csv
+            separator: ","
+            quotchar: '"'
+            encoding: UTF-8
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+              - column:
+                  name: full_name
+                  type: string
+              - column:
+                  name: email
+                  type: string

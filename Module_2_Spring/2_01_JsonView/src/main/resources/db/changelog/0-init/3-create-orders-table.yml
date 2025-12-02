@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Daniil Futin
+      labels: "Create orders table"
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  type: uuid
+                  name: id
+                  constraints:
+                    primaryKey: true
+              - column:
+                  type: uuid
+                  name: user_id
+                  constraints:
+                    nullable: false
+              - column:
+                  type: varchar
+                  name: status
+                  constraints:
+                    nullable: false
+              - column:
+                  type: json
+                  name: products_quantities
+
+        - addForeignKeyConstraint:
+            baseTableName: orders
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            constraintName: orders_users_fk_constraint
