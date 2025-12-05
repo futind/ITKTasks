@@ -1,0 +1,57 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: "Daniil Futin"
+      changes:
+        - createTable:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: isbn
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: summary
+                  type: text
+                  constraints:
+                    nullable: true
+              - column:
+                  name: author_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: publisher_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+
+        - addUniqueConstraint:
+            tableName: books
+            columnNames: isbn
+            constraintName: books_isbn_unique_constraint
+
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: books
+            referencedColumnNames: id
+            referencedTableName: authors
+            constraintName: book_author_fk_constraint
+
+        - addForeignKeyConstraint:
+            baseTableName: books
+            baseColumnNames: publisher_id
+            referencedTableName: publishers
+            referencedColumnNames: id
+            constraintName: book_publisher_fk_constraint

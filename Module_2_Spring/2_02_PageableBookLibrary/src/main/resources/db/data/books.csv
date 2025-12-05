@@ -1,0 +1,37 @@
+id,isbn,title,summary,author_id,publisher_id
+a1dbe23c-6c08-4b6d-bf0e-6a01cd8fc6ab,9780450411434,The Shining,Classic horror novel.,7a1f0c38-6d92-4d98-af1c-6e6820bf2e01,8af7c22c-7ff5-4cd5-a5f8-22fb1cf1af11
+1a2b3c4d-1111-4a2b-9999-aaaaaaaaaaa1,9780747532699,Harry Potter and the Philosopher's Stone,The boy wizard discovers his magical heritage.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+2b3c4d5e-2222-4b3c-8888-bbbbbbbbbbb2,9780747538493,Harry Potter and the Chamber of Secrets,Harry returns to Hogwarts and uncovers a hidden chamber.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+3c4d5e6f-3333-4c4d-7777-ccccccccccc3,9780747542155,Harry Potter and the Prisoner of Azkaban,Harry learns about Sirius Black and the Dementors.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+4d5e6f70-4444-4d5e-6666-ddddddddddd4,9780747546245,Harry Potter and the Goblet of Fire,Harry competes in the Triwizard Tournament.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+5e6f7081-5555-4e6f-5555-eeeeeeeeeee5,9780747551000,Harry Potter and the Order of the Phoenix,Harry battles Voldemort's growing power.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+6f708192-6666-4f70-4444-fffffffffff6,9780747581086,Harry Potter and the Half-Blood Prince,Harry discovers the secrets of Voldemort's past.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+708192a3-7777-4071-3333-111111111117,9780747591070,Harry Potter and the Deathly Hallows,Harry faces Voldemort in the final battle.,e3b7e43e-4c6a-4bac-a1c1-c5e4ad28c702,b0e6986b-a91a-4c30-85ea-733248e9188c
+1f0d141d-e81d-45d7-a097-826ffba9e3ed,9780451524935,1984,Dystopian classic.,f4817343-d3cc-4ee1-9f6d-b4cbadb1cc57,237f7814-e4f8-43bb-9ee3-c121df0af0d3
+077747e5-bfff-4815-b3d4-92c2a7dd2e90,9781451673319,Fahrenheit 451,Future without books.,60ef8289-4f5e-4d7d-b4db-b59dfb2f5bf2,51855b3d-bd29-447c-8c36-69d9bfc50ca3
+b3e18a38-2bc8-4cd2-8346-e2cefcf7b2e5,9780062073488,Murder on the Orient Express,Famous Poirot case.,1a778d45-5f0e-465c-8ee3-1dc1f7ceb6cf,9ab36bb3-e6ea-4c5f-9ba2-fc20f1cd65d8
+e8cccda9-46ce-48b9-93f9-cb9a33ef1ca7,9780684803357,The Old Man and the Sea,Man vs nature.,0b9c45d4-5c76-4ee2-bd4f-b2e8d84e831b,8af7c22c-7ff5-4cd5-a5f8-22fb1cf1af11
+c219f2ea-0710-4f7a-a304-cba104d4d0d0,9780140447934,War and Peace,Classic Russian novel.,9cc44a1a-6d9b-4f49-bd0b-c4ee65764edb,3130a88e-e84b-4ca4-a003-ed566a56324d
+23a3c2cf-99b8-43a9-afab-89ee9c40c2e1,9780140449242,Crime and Punishment,Psychological drama.,38c69d65-f0b1-4843-9f0e-0a670c98f4b2,bd30f3c6-7446-4f14-9d12-7f1acc45bea5
+b30e0db6-6b9a-4dab-8f18-3bfe55bfa47a,9780553294385,Foundation,Sci-fi masterpiece.,e7910ce8-a294-4fbf-90be-e0d4b1560f4a,2de25359-cae7-4cf7-8c75-f4a73bfd68c7
+583bb4a0-4e8e-45e7-b80d-023a77fbe546,9780345409461,2001: A Space Odyssey,AI and space exploration.,1ac736c2-8ded-4d5d-95c0-52bb12a4b604,51e9c0f8-bb9d-4638-9b79-da51c89b6f8c
+d47e6ae3-7db8-4f7c-aa97-5f244b2d10a1,9780553380163,A Brief History of Time,Universe explained.,f67f3fa7-a6bf-4ff4-a91f-2dba771f9f91,0dc93eae-1bdd-45d0-9d55-845c8b4e2cb2
+ea3cdb04-f869-4ff3-9ddf-9b8d0bf8bb4e,9780345539434,Cosmos,Journey through the universe.,8c0a7f7f-34cc-4a6a-8647-9658bbd4c2f9,c1b35283-3a7d-4fdb-9fcc-28e0f4cc38ec
+df17bc86-808b-4f2a-bc3d-ae090abb76a7,9780060557812,American Gods,Modern mythology.,c709fc21-316b-4fc0-aa7a-8b4499e6c27c,0b8b8a7c-e368-4acb-b155-81924ea4b07f
+521e30ef-b81d-4c69-9b58-ed598e8c7e63,9780062235671,Good Omens,Demonic comedy.,8beaa81e-fd65-40aa-8bc7-2358ef48e5fc,1d87eacf-aa35-47a8-8202-98a176659a64
+7dfab5be-79d9-48d9-a411-13df7ddd0b93,9780547572482,Do Androids Dream of Electric Sheep?,Classic sci-fi.,07a14783-eea7-44f2-9ddb-2a7c79d97b92,7bcd73c8-0e50-4066-8e90-f08e10f8c831
+dc2ae4bb-71cf-4a32-a218-0cb276cf0f94,9780765311788,Mistborn,Fantasy epic.,cc92f52e-b876-4cc6-a400-b6b6a57b7fa2,04e3e96d-87c1-4249-86af-27af4600db5f
+58c857c3-ca71-43e3-b9a7-058edc9c0cbb,9780441172719,Dune,Desert world politics.,6f48ee54-a50a-4875-a6ea-bbd02d5d7c18,bd30f3c6-7446-4f14-9d12-7f1acc45bea5
+919e691b-6c35-4ca7-9dcd-6efee63fa69c,9780547928227,The Hobbit,Adventure begins.,91bcfe46-4d73-4888-8a92-d8a52fb7e4a9,0dc93eae-1bdd-45d0-9d55-845c8b4e2cb2
+bbf88ca8-20ec-41e8-8d0d-46cdaa4b8ca4,9780307474278,The Da Vinci Code,Symbolic thriller.,fd927ce3-eaef-47c8-ac50-cc3c72f19a33,af8f1bb2-e4a4-4372-ae91-7826edd016ce
+4a19724e-610d-44f2-8367-fa3714aa4cd2,9780099448822,Kafka on the Shore,Modern surrealism.,375a3e21-7486-4bf9-a2e6-bac52ff4a5ef,cd8d2f9a-c6b6-4796-b350-e14aa61a5cce
+da9bc856-833b-4c80-9ff2-d6ad10351a91,9780345383211,The Call of Cthulhu,Mythos horror.,0c65bb89-3a43-4ce5-83bd-6006ab5bda8f,9d00c0bd-fd48-4d8c-bb29-80f88373052a
+70cd4950-a826-4e54-8694-78e7d99cf4fc,9780142437179,Adventures of Huckleberry Finn,American classic.,b50f21ae-7470-4622-a35c-b2390d253f70,b7e26c7b-0222-4ce4-a5ed-6374d8f28f68
+9ec396ae-d961-4812-b47a-2c0be6f751f7,9780141439785,Great Expectations,Victorian drama.,0d322a2f-1ab6-463e-9e9e-d84f036fa0e1,9eb1e3bc-df69-49d4-a125-85b8632b7384
+4df9ec22-4887-43aa-bb8d-eff8ca15ce57,9780140444308,Les Misérables,French epic.,8fd7e6bd-232a-4572-bf60-d243fb414a86,5fa4c0f1-eafd-4b8d-bdee-fb566f22dbad
+72894b62-262b-4d99-9ec5-6bc8ed2fa1ac,9780140186517,The Sea-Wolf,Adventure on the seas.,b1f89e68-08cd-4b9e-aa74-10a61a5fa9d6,7fa0bb41-48c7-4dae-98d8-02c8d81f169c
+8abc09cd-a412-4c2b-b21c-3b33d764f85c,9780140449266,The Count of Monte Cristo,Classic revenge tale.,be7a8bf4-8ffc-4f2a-b82d-389f8d96b2c1,8dd43b88-f5ac-442e-aa57-46413b9ec579
+8f6cde32-e0fa-4300-9874-a1f612c9b436,9780140437973,Treasure Island,Pirate adventure.,4ed7d176-03df-4b6d-8a2f-6287b756a6de,e1cccd97-c878-45e6-a3c6-7df181ff1035
+07c8dd86-d9d4-4ca6-9b75-8580588645d8,9780553213508,The Mysterious Island,Island survival.,b563f0fd-af9f-45f0-a6ca-1958c2ee6105,9eb1e3bc-df69-49d4-a125-85b8632b7384
+db52f338-3a98-432b-a6a5-6a0d63f02684,9780147514010,Little Women,Family classic.,931d50f9-efc9-40e7-93cd-1df053812778,51e9c0f8-bb9d-4638-9b79-da51c89b6f8c
+c7424cf6-05ac-4cc3-91d5-6577591398c0,9780141442463,The Picture of Dorian Gray,Moral tale.,aaf1dcad-91e1-4a15-8814-1d0d59abbf16,c8c38269-c4a7-42b9-9b08-170f4481f9ce
