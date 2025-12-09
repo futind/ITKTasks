@@ -1,0 +1,26 @@
+services:
+  projections-db:
+    image: postgres:17.6-alpine3.21
+    env_file: .env
+    ports:
+      - "${DB_PORT}:${DB_PORT_INTERNAL}"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - projections-db-data:/var/lib/postgresql/data
+
+  projections-app:
+    container_name: projections-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${APP_PORT}:${APP_PORT_INTERNAL}"
+    env_file: .env
+    depends_on:
+      - projections-db
+
+volumes:
+  projections-db-data:
