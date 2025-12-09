@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: "Daniil Futin"
+      changes:
+        - createTable:
+            tableName: employees
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: position
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: salary
+                  type: decimal(15,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: department_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            constraintName: employee_department_fk_constraint
+            baseTableName: employees
+            baseColumnNames: department_id
+            referencedTableName: departments
+            referencedColumnNames: id
