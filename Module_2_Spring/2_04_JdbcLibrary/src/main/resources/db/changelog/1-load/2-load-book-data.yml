@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: "Daniil Futin"
+      changes:
+        - loadData:
+            tableName: books
+            file: classpath:db/data/books.csv
+            separator: ","
+            quotChar: '"'
