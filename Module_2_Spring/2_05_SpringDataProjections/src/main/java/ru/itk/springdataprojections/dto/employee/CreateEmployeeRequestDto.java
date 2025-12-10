@@ -1,5 +1,6 @@
 package ru.itk.springdataprojections.dto.employee;
 
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -19,7 +20,7 @@ public record CreateEmployeeRequestDto(
         EmployeePosition position,
 
         @NotNull
-        @Min(0)
+        @DecimalMin("0.0")
         BigDecimal salary,
 
         @NotNull

@@ -1,6 +1,7 @@
 package ru.itk.springdataprojections.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.itk.springdataprojections.dto.department.CreateDepartmentRequestDto;
 import ru.itk.springdataprojections.dto.department.DepartmentDto;
 import ru.itk.springdataprojections.dto.department.UpdateDepartmentRequestDto;
@@ -36,12 +37,14 @@ public class DepartmentService {
                 .orElseThrow(() -> new DepartmentNotFoundException(id));
     }
 
+    @Transactional
     public DepartmentDto createDepartment(CreateDepartmentRequestDto request) {
         DepartmentEntity createdDepartment = departmentMapper.createDepartment(request);
         departmentRepository.save(createdDepartment);
         return departmentMapper.toDto(createdDepartment);
     }
 
+    @Transactional
     public DepartmentDto updateDepartment(UUID id, UpdateDepartmentRequestDto request) {
         DepartmentEntity departmentToUpdate = departmentRepository.findById(id)
                 .orElseThrow(() -> new DepartmentNotFoundException(id));
@@ -50,6 +53,7 @@ public class DepartmentService {
         return departmentMapper.toDto(departmentToUpdate);
     }
 
+    @Transactional
     public void deleteDepartment(UUID id) {
         if (!departmentRepository.existsById(id)) {
             throw new DepartmentNotFoundException(id);

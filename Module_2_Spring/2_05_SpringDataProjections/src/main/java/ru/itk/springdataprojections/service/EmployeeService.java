@@ -1,6 +1,7 @@
 package ru.itk.springdataprojections.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.itk.springdataprojections.dto.employee.CreateEmployeeRequestDto;
 import ru.itk.springdataprojections.dto.employee.EmployeeDto;
 import ru.itk.springdataprojections.dto.employee.EmployeeProjectionDto;
@@ -31,11 +32,15 @@ public class EmployeeService {
     }
 
     public List<EmployeeDto> getAllEmployees() {
-        return employeeRepository.findAll().stream().map(employeeMapper::toDto).toList();
+        return employeeRepository.findAll().stream()
+                .map(employeeMapper::toDto)
+                .toList();
     }
 
     public List<EmployeeProjectionDto> getAllEmployeeProjections() {
-        return employeeRepository.findAllProjections().stream().map(employeeMapper::toProjectionDto).toList();
+        return employeeRepository.findAllProjections().stream()
+                .map(employeeMapper::toProjectionDto)
+                .toList();
     }
 
     public EmployeeDto getEmployeeById(UUID id) {
@@ -50,6 +55,7 @@ public class EmployeeService {
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
     }
 
+    @Transactional
     public EmployeeDto createEmployee(CreateEmployeeRequestDto request) {
         EmployeeEntity createdEmployee = employeeMapper.createEmployee(request);
         createdEmployee.setDepartment(
@@ -60,6 +66,7 @@ public class EmployeeService {
         return employeeMapper.toDto(createdEmployee);
     }
 
+    @Transactional
     public EmployeeDto updateEmployee(UUID id, UpdateEmployeeRequestDto request) {
         EmployeeEntity employeeToUpdate = employeeRepository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
@@ -74,6 +81,7 @@ public class EmployeeService {
         return employeeMapper.toDto(employeeToUpdate);
     }
 
+    @Transactional
     public void deleteEmployee(UUID id) {
         if (!employeeRepository.existsById(id)) {
             throw new EmployeeNotFoundException(id);

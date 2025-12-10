@@ -1,5 +1,6 @@
 package ru.itk.springdataprojections.dto.employee;
 
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import ru.itk.springdataprojections.dto.employee.enumeration.EmployeePosition;
 
@@ -13,7 +14,7 @@ public record UpdateEmployeeRequestDto(
 
         EmployeePosition position,
 
-        @Min(0)
+        @DecimalMin("0.0")
         BigDecimal salary,
 
         UUID departmentId
