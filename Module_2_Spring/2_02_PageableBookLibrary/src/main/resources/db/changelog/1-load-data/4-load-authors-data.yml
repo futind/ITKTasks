@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-authors
+      author: Daniil Futin
+      changes:
+        - loadData:
+            file: classpath:db/data/authors.csv
+            tableName: authors
+            separator: ","
+            encoding: UTF-8
