@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-1
+      author: "Daniil Futin"
+      changes:
+        - loadData:
+            tableName: products
+            file: classpath:db/changelog/data/products.csv
+            separator: ","

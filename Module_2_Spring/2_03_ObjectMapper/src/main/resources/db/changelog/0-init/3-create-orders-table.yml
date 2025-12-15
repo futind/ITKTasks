@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-3
+      author: "Daniil Futin"
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: customer_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: order_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_price
+                  type: decimal(15,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: order_status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            constraintName: orders_customer_fk_constraint
+            baseTableName: orders
+            baseColumnNames: customer_id
+            referencedTableName: customers
+            referencedColumnNames: id

@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-1
+      author: "Daniil Futin"
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: text
+                  constraints:
+                    nullable: true
+              - column:
+                  name: price
+                  type: decimal(15,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: quantity_in_stock
+                  type: int
+                  constraints:
+                    nullable: false
