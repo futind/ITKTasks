@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-2
+      author: "Daniil Futin"
+      changes:
+        - createTable:
+            tableName: customers
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: contact_number
+                  type: varchar(12)
+                  constraints:
+                    nullable: false

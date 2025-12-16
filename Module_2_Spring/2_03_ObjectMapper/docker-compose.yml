@@ -1,0 +1,26 @@
+services:
+  object-mapper-db:
+    image: postgres:17.6-alpine3.21
+    env_file: .env
+    ports:
+      - "${DB_PORT}:${DB_PORT_INTERNAL}"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - object-mapper-db-data:/var/lib/postgresql/data
+
+  object-mapper-app:
+    container_name: object-mapper-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${APP_PORT}:${APP_PORT_INTERNAL}"
+    env_file: .env
+    depends_on:
+      - object-mapper-db
+
+volumes:
+  object-mapper-db-data:
